@@ -1,16 +1,14 @@
 // run.js
 
-
 const main = async () => {
   const nftContractFactory = await hre.ethers.getContractFactory("Becha");
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
   console.log("Contract deployed to:", nftContract.address);
 
-  let txn = await nftContract.ownerMint("Bedcha");
+  let txn = await nftContract.ownerMint("Becha");
   await txn.wait();
-  txn = await nftContract.ownerMint("Bedcha");
-  await txn.wait();
+
 };
 const runMain = async () => {
   try {
